@@ -1,0 +1,174 @@
+// Inputs
+
+i0 = input(d,data)
+i1 = input(d,data)
+i2 = input(d,data)
+i3 = input(d,data)
+i4 = input(d,data)
+i5 = input(d,data)
+i6 = input(d,data)
+i7 = input(d,data)
+
+u0 = i7
+u1 = i6
+u2 = i5
+u3 = i4
+u4 = i3
+u5 = i2
+u6 = i1
+u7 = i0
+
+// Top linear transform 
+
+t23 = u0 + u3
+t22 = u1 # u3
+t2 = u0 # u1
+t1 = u3 + u4
+t24 = u4 # u7
+r5 = u6 + u7
+t8 = u1 # t23
+
+t19 = t22 + r5
+t9 = u7 # t1
+t10 = t2 + t24
+t13 = t2 + r5
+t3 = t1 + r5
+t25 = u2 # t1
+r13 = u1 + u6 
+
+t17 = u2 # t19
+t20 = t24 + r13
+t4 = u4 + t8
+r17 = u2 # u5
+r18 = u5 # u6
+r19 = u2 # u4
+y5 = u0 + r17
+
+
+t6 = t22 + r17
+t16 = r13 + r19
+t27 = t1 + r18
+t15 = t10 + t27
+t14 = t10 + r18
+t26 = t3 + t16
+
+// Shared part of the aes s-box 
+ds = y5
+m1 = t13 & t6
+m2 = t23 & t8 
+m3 = t14 + m1
+m4 = t19 & ds
+m5 = m4 + m1
+m6 = t3 & t16
+m7 = t22 & t9
+m8 = t26 + m6
+m9 = t20 & t17
+m10 = m9 + m6
+m11 = t1 & t15
+m12 = t4 & t27
+m13 = m12 + m11
+m14 = t2 & t10
+m15 = m14 + m11
+m16 = m3 + m2
+
+m17 = m5 + t24 
+m18 = m8 + m7
+m19 = m10 + m15
+m20 = m16 + m13
+m21 = m17 + m15
+m22 = m18 + m13
+m23 = m19 + t25
+m24 = m22 + m23
+m25 = m22 & m20
+m26 = m21 + m25
+m27 = m20 + m21
+m28 = m23 + m25
+m29 = m28 & m27
+m30 = m26 & m24
+m31 = m20 & m23
+m32 = m27 & m31
+
+m33 = m27 + m25
+m34 = m21 & m22
+m35 = m24 & m34 
+m36 = m24 + m25
+m37 = m21 + m29
+m38 = m32 + m33
+m39 = m23 + m30
+m40 = m35 + m36
+m41 = m38 + m40
+m42 = m37 + m39
+m43 = m37 + m38
+m44 = m39 + m40
+m45 = m42 + m41
+m46 = m44 & t6
+m47 = m40 & t8
+m48 = m39 & ds
+
+m49 = m43 & t16
+m50 = m38 & t9
+m51 = m37 & t17
+m52 = m42 & t15
+m53 = m45 & t27 
+m54 = m41 & t10
+m55 = m44 & t13
+m56 = m40 & t23
+m57 = m39 & t19
+m58 = m43 & t3
+m59 = m38 & t22
+m60 = m37 & t20
+m61 = m42 & t1
+m62 = m45 & t4
+m63 = m41 & t2
+
+// Bottom linear transform
+p0 = m52 + m61
+p1 = m58 + m59
+p2 = m54 + m62
+p3 = m47 + m50
+p4 = m48 + m56
+p5 = m46 + m51
+p6 = m49 + m60
+p7 = p0 + p1
+p8 = m50 + m53
+p9 = m55 + m63
+
+p10 = m57 + p4
+p11 = p0 + p3
+p12 = m46 + m48
+p13 = m49 + m51
+p14 = m49 + m62
+p15 = m54 + m59
+p16 = m57 + m61
+p17 = m58 + p2
+p18 = m63 + p5
+p19 = p2 + p3
+
+p20 = p4 + p6
+p22 = p2 + p7
+p23 = p7 + p8
+p24 = p5 + p7
+p25 = p6 + p10
+p26 = p9 + p11
+p27 = p10 + p18
+p28 = p11 + p25
+p29 = p15 + p20
+w0 = p13 + p22
+
+w1 = p26 + p29
+w2 = p17 + p28
+w3 = p12 + p22
+w4 = p23 + p27
+w5 = p19 + p24
+w6 = p14 + p23
+w7 = p9 + p16
+
+o0 = output(w7) 
+o1 = output(w6)
+o2 = output(w5)
+o3 = output(w4)
+o4 = output(w3)
+o5 = output(w2)
+o6 = output(w1)
+o7 = output(w0)
+
