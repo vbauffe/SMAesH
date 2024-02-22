@@ -1,0 +1,77 @@
+// Inputs
+
+i0 = input(d,data)
+i1 = input(d,data)
+i2 = input(d,data)
+i3 = input(d,data)
+i4 = input(d,data)
+i5 = input(d,data)
+i6 = input(d,data)
+i7 = input(d,data)
+
+u0 = i7
+u1 = i6
+u2 = i5
+u3 = i4
+u4 = i3
+u5 = i2
+u6 = i1
+u7 = i0
+
+// Top linear transform 
+
+t23 = u0 + u3
+t22 = u1 # u3
+t2 = u0 # u1
+t1 = u3 + u4
+t24 = u4 # u7
+r5 = u6 + u7
+t8 = u1 # t23
+
+t19 = t22 + r5
+t9 = u7 # t1
+t10 = t2 + t24
+t13 = t2 + r5
+t3 = t1 + r5
+t25 = u2 # t1
+r13 = u1 + u6 
+
+t17 = u2 # t19
+t20 = t24 + r13
+t4 = u4 + t8
+r17 = u2 # u5
+r18 = u5 # u6
+r19 = u2 # u4
+y5 = u0 + r17
+
+
+t6 = t22 + r17
+t16 = r13 + r19
+t27 = t1 + r18
+t15 = t10 + t27
+t14 = t10 + r18
+t26 = t3 + t16
+
+
+o1 = output(t1)
+o2 = output(t2)
+o3 = output(t3)
+o4 = output(t4)
+o6 = output(t6)
+o8 = output(t8)
+o9 = output(t9)
+o10 = output(t10)
+o13 = output(t13)
+o14 = output(t14)
+o15 = output(t15)
+o16 = output(t16)
+o17 = output(t17)
+o19 = output(t19)
+o20 = output(t20) 
+o22 = output(t22)
+o23 = output(t23)
+o24 = output(t24)
+o25 = output(t25)
+o26 = output(t26)
+o27 = output(t27)
+o28 = output(y5)

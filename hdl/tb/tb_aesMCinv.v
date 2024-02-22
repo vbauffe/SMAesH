@@ -1,4 +1,4 @@
-module tb_aesMC;
+module tb_aesMCinv;
 
 wire [7:0] b0, b1, b2, b3;
 wire [7:0] a0, a1, a2, a3;

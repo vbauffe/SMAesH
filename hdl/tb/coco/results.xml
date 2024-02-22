@@ -1,0 +1,8 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1705494039" />
+    <testcase name="my_first_test" classname="tb_aesMCinv" file="/home/vincent/AES/SMAesH/hdl/tb/coco/tb_aesMCinv.py" lineno="10" time="0.0012128353118896484" sim_time_ns="1000000.001" ratio_time="824514252.8394543">
+      <failure message="Test failed with RANDOM_SEED=1705494039" />
+    </testcase>
+  </testsuite>
+</testsuites>

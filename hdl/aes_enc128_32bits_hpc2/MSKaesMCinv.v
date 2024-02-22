@@ -1,4 +1,4 @@
-module MSKaesMCinv # (parameter d = 2)
+module MSKaesMCinv # (parameter d = 1)
 (
     input [8*d-1:0] b0, b1, b2, b3,
     output [8*d-1:0] a0, a1, a2, a3
